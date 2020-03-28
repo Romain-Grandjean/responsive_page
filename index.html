@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/tablet-style.css" media="(max-width:900px)">
     <link rel="stylesheet" href="./css/mobile-style700.css" media="(max-width:750px)">
-    <link rel="stylesheet" href="./css/mobile-style400.css" media="(max-width:450px)">
+    <!-- <link rel="stylesheet" href="./css/mobile-style400.css" media="(max-width:450px)"> -->
     <title>Document</title>
 </head>
 <body>
@@ -16,7 +16,40 @@
         <header class="header">
             <div class="header-elements">
                 <img src="./img/logo_001.png" class="logo" alt="logo">
-                <img src="./img/burger-menu.png" class="burger21" alt="">
+                <div class="mobile-navigation">
+                        <input type="checkbox" id="checkbox" name="checkbox">
+                        <label for="checkbox"></label>
+                        <div class="burger-menu">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>
+                            <div class="line4"></div>
+                        </div>
+                        <div class="mobile-menu">
+                                <ul id="listPages">
+                                    <li><a href="">Products</a></li>
+                                    <li><a href="">Prices</a></li>
+                                    <li><a href="">Blog</a></li>
+                                    <li><a href="">Team</a></li>
+
+                                </ul>
+                                <div class="separator"></div>
+                                <ul id="login-signIn">
+                                    <li><a href="">Login</a></li>
+                                    <div class="email">
+                                        <span>Email</span>
+                                        <input type="email">
+                                    </div>
+                                    <div class="password">
+                                        <span>Password</span>
+                                        <input type="password">
+                                    </div>   
+                                    <div class="button-enter">
+                                        <span>Enter</span>
+                                    </div>
+                                </ul>
+                        </div>
+                </div>
 
                 <div class="nav-bar">
                     <ul>
@@ -29,10 +62,12 @@
                     </ul>
                 </div>
             </div>
+
+
+            
         </header>
 
         <div class="page-content">
-
             <div class="text-zone">
 
                 <span class="headlines">Make your Startup web with our template</span>

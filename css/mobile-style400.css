@@ -57,12 +57,28 @@ body {
     /* border: rgb(251, 255, 0) 2px solid; */
 }
 
-.burger {
-    display: block;
-    width: 2.00rem;
-    height: auto;
-    margin: 0rem 1.30rem;
 
+.burger-menu {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0rem 2.30rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.left-menu {
+    display: none;
+}
+
+.right-zone {
+    display: none;
 }
 
 .nav-bar {

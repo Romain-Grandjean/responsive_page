@@ -85,9 +85,14 @@ a {
     margin: 0rem 0rem 0rem 1rem;
 }
 
-.burger21 {
+input[type="checkbox"] {
     display: none;
 }
+
+.mobile-menu {
+    display: none;
+}
+
 
 .page-content {
     width: 50rem;

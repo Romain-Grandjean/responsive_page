@@ -32,8 +32,6 @@ body {
     top: 0;
     position: absolute;
     padding-bottom: 5rem;
-
-    /* border: rgb(0, 255, 157) 4px solid; */
 }
 
 .header-elements {
@@ -53,21 +51,189 @@ body {
     width: 8.5rem;
     height: auto;
     margin: 0rem 2.30rem;
+    z-index: 12;
 }
 
-.burger21 {
-    display: block;
-    width: 2rem;
+.mobile-navigation {
+    width: auto;
     height: auto;
     margin: 0rem 2.30rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.burger-menu {
+    position: absolute;
+    display: block;
+
+    width: 28px;
+    height: 23px;
+
+    z-index: 13;
+    transform: translateY(-0px);
+
+}
+
+.line1, .line4 {
+    background-color: white;
+    width: 28px;
+    height: 2px;
+    margin: 0px 0 4px 0;
+} 
+
+.line2, .line3 {
+    background-color: white;
+    width: 28px;
+    height: 2px;
+    margin: 4px 0 4px 0;
+} 
+
+.mobile-navigation input[type="checkbox"] {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 15;
+    z-index: 13;
+}
+
+input[type="checkbox"] + label {
+    display: block;
+    width: 28px;
+    height: 23px;
+    content: "";
+    z-index: 14;
+}
+
+input[type="checkbox"] + label:hover {
+    cursor: pointer;
+}
+
+.mobile-navigation input:checked ~ .mobile-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsla(212, 40%, 27%, 0.94);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    animation-name: moveMenu;
+    animation-duration: .8s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+}    
+
+@keyframes moveMenu {
+    0% {
+        background-color: hsla(212, 40%, 27%, 0);
+        opacity: 0;        
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        background-color: hsla(212, 40%, 27%, 0.94);
+    }
+} 
+
+.mobile-navigation input:checked ~ .burger-menu .line1 {
+    opacity: 0;
+    z-index: 11;
+    animation-name: moveline1;
+    animation-duration: .1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+}    
+
+@keyframes moveline1 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.mobile-navigation input:checked ~ .burger-menu .line4 {
+    opacity: 0;
+    z-index: 11;
+    animation-name: moveline2;
+    animation-duration: .1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+}    
+
+@keyframes moveline2 {
+    0% {
+        opacity: 2;
+    }
+    100% {
+        opacity: 0;
+    }
+} 
+
+.mobile-navigation input:checked ~ .burger-menu .line2 {
+    transform: rotate(48deg) translateY(2px) translateX(2.6px);
+    background-color: rgb(255, 255, 255));
+    z-index: 11;
+    animation-name: moveline3;
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+}    
+
+@keyframes moveline3 {
+    0% {
+        transform: rotate(0) translateY(0px) translateX(0px);
+
+    }
+    50% {
+        transform: rotate(0) translateY(2px) translateX(2.6px);
+    }
+    100% {
+        transform: rotate(48deg) translateY(2px) translateX(2.6px);
+    }
+}   
+
+.mobile-navigation input:checked ~ .burger-menu .line3 {
+    transform: rotate(-48deg) translateY(-2px) translateX(2px);
+    z-index: 11;
+    animation-name: moveline4;
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+}    
+
+@keyframes moveline4 {
+    0% {
+        transform: rotate(0) translateY(0px) translateX(0px);
+
+    }
+    50% {
+        transform: rotate(0) translateY(-2px) translateX(2px);
+    }
+    100% {
+        transform: rotate(-48deg) translateY(-2px) translateX(2px);
+    }
+}  
+
+.mobile-menu {
+    display: none;
 }
 
 .nav-bar {
     display: none;
     width: auto;
     height: auto;
-
-    /* border: rgb(255, 0, 212) 4px solid; */
 }
 .nav-bar ul {
     font-size: 0.85rem;
@@ -80,12 +246,136 @@ body {
     list-style: none;
 }
 
-a {
+a, ul {
     text-decoration: none;
+    list-style: none;
     color: white;
-    text-transform: uppercase;
     margin: 0rem 0rem 0rem 1rem;
 }
+
+#listPages {
+    
+
+    width: 20rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8%;
+
+    /* border: 2px green solid; */
+
+}
+
+#listPages li {
+    height: 4rem;
+    width: auto;
+    margin: 0;
+    align-self: center;
+    /* border: 1px rgb(106, 56, 255) solid; */
+}
+
+#listPages a {
+    padding: 2rem;
+    align-self: center;
+    margin: 0;
+    /* border: 1px green solid; */
+}
+
+
+#login-signIn {
+    
+    margin-top: 8%;
+    width: 20rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#login-signIn li {
+    height: 4rem;
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    /* border: 1px rgb(255, 19, 19) solid; */
+}
+
+#login-signIn a {
+
+    margin: 0;
+    padding: 0;
+
+    /* border: 1px rgb(255, 19, 19) solid; */
+}
+
+.separator {
+    width: 100vw;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.password, .email {
+    width: 20rem;
+    height: 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px white solid;
+    margin-bottom: 2rem;
+
+}
+
+.password span, .email span {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.button-enter {
+    width: 7rem;
+    height: 2.4rem;
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    border: 1px white solid;
+    border-radius: 5%;
+    align-self: flex-end;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+	margin:0;
+	border:0;
+	padding:0;
+	display:inline-block;
+	vertical-align:middle;
+	white-space:normal;
+	background:none;
+	line-height:0;
+}
+input:focus
+{
+    color: white;
+    outline:0;
+}
+
+.mobile-menu a {
+    display: block;
+    margin-bottom: 3rem;
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-family: Helvetica;
+    font-weight: bold;
+    text-transform: none;
+}
+
 
 .page-content {
     width: auto;
@@ -181,6 +471,7 @@ a {
     font-weight: 600;
 
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
 }

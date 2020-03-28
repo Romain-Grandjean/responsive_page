@@ -68,9 +68,14 @@ body {
     /* border: rgb(255, 0, 212) 4px solid; */
 }
 
-.burger {
+input[type="checkbox"] {
     display: none;
 }
+
+.mobile-menu {
+    display: none;
+}
+
 
 .nav-bar ul {
     font-size: 0.85rem;
