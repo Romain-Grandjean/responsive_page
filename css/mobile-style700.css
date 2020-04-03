@@ -26,6 +26,9 @@ body {
     position: relative;
 }
 
+
+/* Header elements & navigation menu */
+
 .header {
     width: 100vw;
     height: auto; 
@@ -43,8 +46,6 @@ body {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-
-    /* border: rgb(255, 0, 0) 4px solid; */
 }
 
 .logo {
@@ -66,13 +67,10 @@ body {
 .burger-menu {
     position: absolute;
     display: block;
-
     width: 28px;
     height: 23px;
-
     z-index: 13;
     transform: translateY(-0px);
-
 }
 
 .line1, .line4 {
@@ -254,8 +252,6 @@ a, ul {
 }
 
 #listPages {
-    
-
     width: 20rem;
     height: auto;
     display: flex;
@@ -263,9 +259,6 @@ a, ul {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 8%;
-
-    /* border: 2px green solid; */
-
 }
 
 #listPages li {
@@ -273,26 +266,21 @@ a, ul {
     width: auto;
     margin: 0;
     align-self: center;
-    /* border: 1px rgb(106, 56, 255) solid; */
 }
 
 #listPages a {
     padding: 2rem;
     align-self: center;
     margin: 0;
-    /* border: 1px green solid; */
 }
 
-
 #login-signIn {
-    
     margin-top: 8%;
     width: 20rem;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
 #login-signIn li {
@@ -300,15 +288,11 @@ a, ul {
     margin: 0;
     padding: 0;
     align-self: center;
-    /* border: 1px rgb(255, 19, 19) solid; */
 }
 
 #login-signIn a {
-
     margin: 0;
     padding: 0;
-
-    /* border: 1px rgb(255, 19, 19) solid; */
 }
 
 .separator {
@@ -380,15 +364,12 @@ input:focus
 .page-content {
     width: auto;
     height: 74vh;
-
     display: flex;
     flex-flow: column-reverse wrap;
     justify-content: space-between;
     align-items: center;
     margin: 10rem 2.30rem 2rem 2.30rem;
     position: relative;
-
-    /* border: 4px red solid; */
 }
 
 .text-zone {
@@ -400,8 +381,6 @@ input:focus
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-
-    /* border: 4px blue solid; */
 }
 
 .picture-zone {
@@ -414,8 +393,6 @@ input:focus
     align-items: center;
     margin-top: 1rem;
     transform: translateX(3rem); 
-
-    /* border: 4px rgb(200, 255, 2) solid; */
 }
 
 /* Text zone contents */
