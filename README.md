@@ -1,2 +1,2 @@
 # responsive_page
-DCi exercise / Create a responsive webpage 
+DCi exercise / [Responsive webpage](https://in-roma.github.io/responsive_page/)
