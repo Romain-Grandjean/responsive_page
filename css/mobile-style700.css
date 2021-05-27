@@ -126,6 +126,29 @@ input[type="checkbox"] + label:hover {
     animation-iteration-count: 1;
 }    
 
+.mobile-navigation input:not(:checked)~ .mobile-menu {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsla(212, 40%, 27%, 0.94);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    /* animation-name: moveMenu;
+    animation-duration: .8s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: reverse; */
+}   
+
+
+
 @keyframes moveMenu {
     0% {
         background-color: hsla(212, 40%, 27%, 0);
@@ -148,6 +171,18 @@ input[type="checkbox"] + label:hover {
     animation-delay: 0s;
     animation-iteration-count: 1;
 }    
+
+/* 
+.mobile-navigation input:not(:checked)~ .burger-menu .line1 {
+    opacity: 0;
+    z-index: 11;
+    animation-name: moveline1;
+    animation-duration: .1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+}     */
 
 @keyframes moveline1 {
     0% {
